@@ -1,0 +1,158 @@
+#space-clicking {
+  width: 1440px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+
+.space-rectangle-galaxie {
+  background-color: grey;
+  width: 1440px;
+  height: 1080px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-rectangle-black-hole {
+  background-color: black;
+  width: 1440px;
+  height: 1080px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-rectangle-earth {
+  background: linear-gradient(to bottom, #0c1445 0%, #1a2b5e 50%, #2d4a7c 100%);
+  width: 1440px;
+  height: 1080px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#space-circle {
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+#space-circle-black-hole {
+  width: 30px;
+  height: 30px;
+  background: grey;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+  transition: transform 0.2s;
+  opacity: 0;
+}
+
+#space-circle:hover {
+  transform: scale(1.2);
+}
+
+#space-circle-black-hole:hover {
+  transform: scale(1.2);
+}
+
+.hide {
+  display: none;
+}
+
+.dezoom {
+  animation: dezoomAnimation 2s ease-out forwards;
+}
+
+@keyframes dezoomAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.02);
+    opacity: 0;
+  }
+}
+
+#space-scrolling-vertical {
+  min-height: 400vh;
+  position: relative;
+}
+
+.space-rectangle-earth {
+  background: linear-gradient(to bottom, #0c1445 0%, #1a2b5e 50%, #2d4a7c 100%);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.space-rectangle-paralax-cloud1,
+.space-rectangle-paralax-cloud2,
+.space-rectangle-paralax-cloud3 {
+  position: absolute;
+  opacity: 0;
+}
+
+.space-rectangle-paralax-cloud1 {
+  width: 300px;
+  height: 150px;
+  background: radial-gradient(
+    square,
+    rgba(200, 100, 200, 0.8),
+    rgba(150, 80, 180, 0.4)
+  );
+  top: 10%;
+  left: 20%;
+}
+
+.space-rectangle-paralax-cloud2 {
+  width: 400px;
+  height: 180px;
+  background: radial-gradient(
+    square,
+    rgba(180, 90, 200, 0.8),
+    rgba(140, 70, 190, 0.4)
+  );
+  top: 20%;
+  right: 15%;
+}
+
+.space-rectangle-paralax-cloud3 {
+  width: 350px;
+  height: 160px;
+  background: radial-gradient(
+    square,
+    rgba(190, 95, 210, 0.8),
+    rgba(145, 75, 195, 0.4)
+  );
+  top: 35%;
+  left: 40%;
+}
+
+.scroll-blocked {
+  overflow: hidden;
+  height: 100vh;
+}
