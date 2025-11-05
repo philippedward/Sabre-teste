@@ -6,8 +6,9 @@ gsap.registerPlugin(ScrollTrigger);
 const galaxy = document.querySelector(".space-galaxy");
 const spaceContainer = document.querySelector(".container.space");
 const blackHole = document.querySelector("#space-blackHole");
+const horizontalScroll = document.querySelector(".slider-track");
 
-document.body.style.overflow = "hidden";
+// document.body.style.overflow = "hidden";
 
 blackHole.addEventListener("click", () => {
   gsap.to(blackHole, {
@@ -32,3 +33,16 @@ const earthTimline = gsap.timeline({
 earthTimline.to(".earth-cloud1", { opacity: 1 });
 earthTimline.to(".earth-cloud2", { opacity: 1 });
 earthTimline.to(".earth-cloud3", { opacity: 1 });
+
+gsap.to(".slider-track", {
+  scrollTrigger: {
+    trigger: ".horizontal-mask",
+    start: "top top",
+    end: "+800%",
+    pin: true,
+    scrub: true,
+    markers: true,
+  },
+  x: "-205%",
+  ease: "sine.inOut",
+});

@@ -17,11 +17,10 @@ body {
   // overflow: hidden;
   color: white;
   font-size: 100px;
-  overflow: auto; /* Active le défilement si nécessaire */
-  scrollbar-width: none; /* Masque la barre pour Firefox */
-  -ms-overflow-style: none; /* Masque la barre pour IE et Edge */
+  // scrollbar-width: none; /* Masque la barre pour Firefox */
+  // -ms-overflow-style: none; /* Masque la barre pour IE et Edge */
 }
 
-body::-webkit-scrollbar {
-  display: none; /* Masque la barre pour Chrome, Safari et Opera */
-}
+// body::-webkit-scrollbar {
+//   display: none; /* Masque la barre pour Chrome, Safari et Opera */
+// }
