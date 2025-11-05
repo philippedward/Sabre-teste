@@ -1,3 +1,41 @@
+.earth {
+  width: 100vw;
+  height: 100vh;
+}
+
+.earth-space-groupe {
+  height: 300vh;
+  position: relative;
+  background-color: pink;
+}
+
+.earth-cloud1,
+.earth-cloud2,
+.earth-cloud3 {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background-color: green;
+}
+
+.earth-cloud1 {
+  opacity: 0;
+  bottom: 10%;
+  left: 30%;
+}
+
+.earth-cloud2 {
+  opacity: 0;
+  bottom: 10%;
+  left: 60%;
+}
+
+.earth-cloud3 {
+  opacity: 0;
+  bottom: 20%;
+  left: 10%;
+}
+
 .earth-space {
   background-color: rgb(37, 30, 46);
   width: 100%;

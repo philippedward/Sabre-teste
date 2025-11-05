@@ -12,4 +12,9 @@
   border-radius: 50%;
   width: 5%;
   height: 9%;
+  transition: transform 0.3s ease;
+}
+
+#space-blackHole:hover {
+  transform: scale(1.5);
 }
