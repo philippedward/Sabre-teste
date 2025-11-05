@@ -4,7 +4,7 @@
 }
 
 .earth-space-groupe {
-  height: 300vh;
+  height: 100vh;
   position: relative;
   background-color: pink;
 }
@@ -13,26 +13,25 @@
 .earth-cloud2,
 .earth-cloud3 {
   position: absolute;
-  width: 20%;
+  width: 30%;
   height: 20%;
   background-color: green;
 }
 
 .earth-cloud1 {
   opacity: 0;
-  bottom: 10%;
+  top: 30%;
   left: 30%;
 }
 
 .earth-cloud2 {
   opacity: 0;
-  bottom: 10%;
+  top: 15%;
   left: 60%;
 }
 
 .earth-cloud3 {
   opacity: 0;
-  bottom: 20%;
   left: 10%;
 }
 
@@ -100,4 +99,8 @@
   background-color: rgb(194, 104, 128);
   width: 100%;
   height: 100vh;
+}
+
+.earth-margin {
+  margin-top: 342%;
 }

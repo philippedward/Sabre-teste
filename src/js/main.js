@@ -21,12 +21,37 @@ blackHole.addEventListener("click", () => {
   });
 });
 
+// const earthTimline = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".earth-space-groupe",
+//     start: "bottom bottom",
+//     scrub: true,
+//     pin: true,
+//     markers: true,
+//   },
+// });
+
+// const earthTimline = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".earth-space-groupe",
+//     start: "top top",
+//     end: "bottom bottom", // Change ceci - il s'arrête quand le bas du trigger atteint le bas du viewport
+//     scrub: true,
+//     pin: true,
+//     markers: true,
+//     pinSpacing: true, // Garde l'espace → pas de superposition / fasle Pas d'espace → superposition
+//   },
+// });
+
 const earthTimline = gsap.timeline({
   scrollTrigger: {
-    trigger: ".earth-space-groupe",
-    start: "bottom bottom",
+    trigger: ".container.earth", // ← Trigger sur le container
+    start: "top top",
+    end: "+=1000vh",
     scrub: true,
-    pin: true,
+    pin: ".container.earth", // ← Pin tout le container, pas juste le groupe
+    pinSpacing: true,
+    markers: true,
   },
 });
 
@@ -41,7 +66,7 @@ gsap.to(".slider-track", {
     end: "+800%",
     pin: true,
     scrub: true,
-    markers: true,
+    markers: true, //false pour retiré le text qui intique end scrolling
   },
   x: "-75.2%",
   ease: "sine.inOut",
