@@ -43,6 +43,6 @@ gsap.to(".slider-track", {
     scrub: true,
     markers: true,
   },
-  x: "-205%",
+  x: "-75.2%",
   ease: "sine.inOut",
 });
