@@ -1,9 +1,12 @@
-.space-galaxy {
+.part-1-galaxy {
   position: relative;
   overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(34, 22, 36);
 }
 
-#space-blackHole {
+#part-1-blackHole {
   position: absolute;
   top: 44%;
   left: 51%;
@@ -16,7 +19,7 @@
   overflow: hidden;
 }
 
-#space-blackHole img {
+#part-1-blackHole img {
   position: absolute;
   top: 40px;
   left: 10px;
@@ -27,6 +30,6 @@
   transform: scale(8) translate(-0.5px, 8px);
 }
 
-#space-blackHole:hover {
+#part-1-blackHole:hover {
   transform: scale(1.2);
 }

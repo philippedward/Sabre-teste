@@ -3,10 +3,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const galaxy = document.querySelector(".space-galaxy");
-const spaceContainer = document.querySelector(".container.space");
-const blackHole = document.querySelector("#space-blackHole");
-const horizontalScroll = document.querySelector(".slider-track");
+const galaxy = document.querySelector(".part-1-galaxy");
+const blackHole = document.querySelector("#part-1-blackHole");
 
 // document.body.style.overflow = "hidden";
 
@@ -35,7 +33,7 @@ const horizontalScroll = document.querySelector(".slider-track");
 let isExpanded = false; // Variable pour savoir si le cercle est agrandi
 
 blackHole.addEventListener("click", () => {
-  const img = blackHole.querySelector("img");
+  const img = blackHole.querySelector(".part-1-img");
 
   if (!isExpanded) {
     // Animation d'agrandissement
@@ -78,31 +76,31 @@ blackHole.addEventListener("click", () => {
   }
 });
 
-const earthTimline = gsap.timeline({
+const part2Timline = gsap.timeline({
   scrollTrigger: {
-    trigger: ".earth-space-groupe", // ← Trigger sur le container
+    trigger: ".part-2-landscape",
     start: "top top",
     end: "+=1100vh",
     scrub: true,
-    pin: ".container.earth", // ← Pin tout le container, pas juste le groupe
+    pin: ".container-part-2",
     pinSpacing: true,
     markers: true,
   },
 });
 
-earthTimline.to(".earth-cloud1", { opacity: 1 });
-earthTimline.to(".earth-cloud2", { opacity: 1 });
-earthTimline.to(".earth-cloud3", { opacity: 1 });
+part2Timline.to("#cloud-1", { opacity: 1 });
+part2Timline.to("#cloud-2", { opacity: 1 });
+part2Timline.to("#cloud-3", { opacity: 1 });
 
 gsap.to(".slider-track", {
   scrollTrigger: {
     trigger: ".horizontal-mask",
     start: "top top",
-    end: "+500%",
+    end: "+300%",
     pin: true,
     scrub: true,
     markers: true, //false pour retiré le text qui intique end scrolling
   },
-  x: "-75.2%",
+  x: "-75%",
   ease: "sine.inOut",
 });
