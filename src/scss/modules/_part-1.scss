@@ -1,0 +1,32 @@
+.space-galaxy {
+  position: relative;
+  overflow: hidden;
+}
+
+#space-blackHole {
+  position: absolute;
+  top: 44%;
+  left: 51%;
+  width: 3%;
+  height: 4%;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+  z-index: 2;
+  overflow: hidden;
+}
+
+#space-blackHole img {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.8s ease;
+  transform: scale(8) translate(-0.5px, 8px);
+}
+
+#space-blackHole:hover {
+  transform: scale(1.2);
+}
