@@ -133,3 +133,24 @@ gsap.to(".part-5-snowflake", {
     curviness: 1.5,
   },
 });
+
+const parallax = gsap.parallax({
+  scrollTrigger: {
+    trigger: ".part-3-parallax",
+    start: "top top",
+    end: "+300%",
+    scrub: true,
+    pin: true,
+    markers: true,
+  },
+});
+parallax.to("#case-1", {
+  y: -100,
+});
+parallax.to(
+  "#case-2",
+  {
+    y: -400,
+  },
+  0
+);

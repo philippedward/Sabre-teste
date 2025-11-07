@@ -21,7 +21,7 @@
   height: 100vh;
 }
 
-.part-3-effect {
+.part-3-parallax {
   background-color: rgb(53, 40, 40);
   position: relative;
   width: 100%;
@@ -37,11 +37,13 @@
 }
 
 #case-1 {
+  position: absolute;
   top: 10%;
   left: 10%;
 }
 
 #case-2 {
+  position: absolute;
   bottom: 10%;
   left: 50%;
 }
