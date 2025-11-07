@@ -45,9 +45,9 @@ blackHole.addEventListener("click", () => {
 
 const earthTimline = gsap.timeline({
   scrollTrigger: {
-    trigger: ".container.earth", // ← Trigger sur le container
+    trigger: ".earth-space-groupe", // ← Trigger sur le container
     start: "top top",
-    end: "+=1000vh",
+    end: "+=1100vh",
     scrub: true,
     pin: ".container.earth", // ← Pin tout le container, pas juste le groupe
     pinSpacing: true,
@@ -63,7 +63,7 @@ gsap.to(".slider-track", {
   scrollTrigger: {
     trigger: ".horizontal-mask",
     start: "top top",
-    end: "+800%",
+    end: "+500%",
     pin: true,
     scrub: true,
     markers: true, //false pour retiré le text qui intique end scrolling
